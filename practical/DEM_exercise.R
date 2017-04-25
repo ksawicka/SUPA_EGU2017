@@ -38,13 +38,13 @@ plot(crm, main = "'Gaussian', acf0 = 0.8, range = 200")
 ## ------------------------------------------------------------------------
 # define uncertainty model for the DEM
 demUM <- defineUM(uncertain = TRUE, distribution = "norm", 
-                   distr_param = c(dem30m, dem30m_sd), crm = dem_crm)
+                   distr_param = c(3,1))
 class(demUM)
 
 ## ------------------------------------------------------------------------
 # create realizations of the DEM
 dem_sample <- genSample(UMobject = demUM, n = 100, 
-                        samplemethod = "ugs", nmax = 20, asList = FALSE)
+                        samplemethod = "randomSampling", asList = FALSE)
 
 # view several realizations of DEM
 spplot(dem_sample[c(3,4,1,2)], 
@@ -165,5 +165,5 @@ spplot(slope_q[c(3,4,1,2)],
 slope_q$skiing <- NA
 slope_q$skiing <- ifelse(slope_q$prob10perc > 5, ">90%certain", "<90%certain")
 slope_q$skiing <- as.factor(slope_q$skiing)
-spplot(slope_q, "skiing", col.regions = c("red","green"), main = "Areas suitable for skiing")
+spplot(slope_q, "skiing", col.regions = c("green","red"), main = "Areas suitable for skiing")
 
