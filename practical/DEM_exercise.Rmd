@@ -64,7 +64,7 @@ where x is geographic location, $\mu$ is the (deterministic) mean of Z, $\sigma$
 
 #### Preliminaries - load and view the data
 
-The example data for slope calculations are a 30m resolution mean DEM and standard deviation from the Zlatibor region in Serbia.
+The example data for slope calculations are a 30m resolution mean DEM and standard deviation from the Zlatibor region in Serbia (Hengl et al., 2008).
 
 The provided data include two spatial objects: a mean (dem30m) and the standard deviation (dem30m_sd) map.  
 
@@ -380,4 +380,6 @@ This project has received funding from the European Union’s Seventh Framework 
 Beekhuizen, J. G.B.M. Heuvelink, J. Biesemans and I. Reusen (2011), Effect of DEM uncertainty on the positional accuracy of airborne imagery. IEEE Transactions on Geoscience and Remote Sensing 49, 1567 1577.
 
 HEUVELINK, G. B. M. 2006. Analysing Uncertainty Propagation in GIS: Why is it not that Simple? Uncertainty in Remote Sensing and GIS. John Wiley & Sons, Ltd.
+
+HENGL, T., BAJAT, B., BLAGOJEVIĆ, D. & REUTER, H. I. 2008. Geostatistical modeling of topography using auxiliary maps. Computers & Geosciences, 34, 1886-1899.
 
